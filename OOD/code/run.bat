@@ -1,0 +1,26 @@
+@echo off
+python -u main.py ^
+--model_name=COR ^
+--dataset=meituan ^
+--mlp_dims=[3000] ^
+--mlp_p1_1_dims=[] ^
+--mlp_p1_2_dims=[1] ^
+--mlp_p2_dims=[] ^
+--mlp_p3_dims=[] ^
+--lr=1e-3 ^
+--wd=0 ^
+--batch_size=500 ^
+--epochs=300 ^
+--total_anneal_steps=0 ^
+--anneal_cap=0.1 ^
+--CI=1 ^
+--dropout=0.5 ^
+--Z1_hidden_size=500 ^
+--E2_hidden_size=1000 ^
+--Z2_hidden_size=200 ^
+--bn=0 ^
+--sample_freq=1 ^
+--regs=0 ^
+--act_function=tanh ^
+--log_name=log ^
+--gpu=0 > ./log/COR_meituan.txt 2>&1

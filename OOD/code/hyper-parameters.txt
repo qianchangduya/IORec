@@ -1,0 +1,20 @@
+Synthetic:
+sh run.sh COR_G synthetic [1200,1000] [200,300] [1] [] [20] 1e-3 0.05 500 1000 0 0.5 1 0.5 8 20 20 1 3 0 tanh log 0
+
+python main.py --model_name COR_G --dataset synthetic --mlp_dims "[1200,1000]" --mlp_p1_1_dims "[200,300]" --mlp_p1_2_dims "[1]" --mlp_p2_dims "[]" --mlp_p3_dims "[20]" --lr 1e-3 --wd 0.05 --batch_size 500 --epochs 1000 --total_anneal_steps 0 --anneal_cap 0.5 --CI 1 --dropout 0.5 --Z1_hidden_size 8 --E2_hidden_size 20 --Z2_hidden_size 20 --bn 1 --sample_freq 3 --regs 0  --act_function tanh --log_name log --gpu 0 --cuda
+
+Meituan:
+sh run.sh COR meituan [3000] [] [1] [] [] 1e-3 0 500 300 0 0.1 1 0.5 500 1000 200 0 1 0 tanh log 0
+
+Yelp:
+sh run.sh COR yelp [4000] [] [1] [] [] 1e-3 0 500 120 0 0.85 1 0.4 531 400 300 0 1 0 sigmoid log 0
+
+#美团
+python main.py --model_name COR --dataset meituan --mlp_dims "[3000]" --mlp_p1_1_dims "[]" --mlp_p1_2_dims "[1]" --mlp_p2_dims "[]" --mlp_p3_dims "[]" --lr 1e-3 --wd 0 --batch_size 500 --epochs 300 --total_anneal_steps 0 --anneal_cap 0.1 --CI 1 --dropout 0.5 --Z1_hidden_size 500 --E2_hidden_size 1000 --Z2_hidden_size 200 --bn 0 --sample_freq 1 --regs 0 --act_function tanh --log_name log --gpu 0 --cuda
+
+python main002.py --model_name COR --dataset meituan --mlp_dims "[3000]" --mlp_p1_1_dims "[]" --mlp_p1_2_dims "[1]" --mlp_p2_dims "[]" --mlp_p3_dims "[]" --lr 1e-3 --wd 0 --batch_size 500 --epochs 300 --total_anneal_steps 0 --anneal_cap 0.1 --CI 1 --dropout 0.5 --Z1_hidden_size 500 --E2_hidden_size 1000 --Z2_hidden_size 200 --bn 0 --sample_freq 1 --regs 0 --act_function tanh --log_name log --gpu 0 --cuda
+
+python main003.py --model_name COR --dataset meituan002 --mlp_dims "[3000]" --mlp_p1_1_dims "[]" --mlp_p1_2_dims "[1]" --mlp_p2_dims "[]" --mlp_p3_dims "[]" --lr 1e-3 --wd 0 --batch_size 500 --epochs 300 --total_anneal_steps 0 --anneal_cap 0.1 --CI 1 --dropout 0.5 --Z1_hidden_size 500 --E2_hidden_size 1000 --Z2_hidden_size 200 --bn 0 --sample_freq 1 --regs 0 --act_function tanh --log_name log --gpu 0 --cuda
+
+
+Causal Representation Learning for Out-of-Distribution Recommendation
